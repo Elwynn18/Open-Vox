@@ -1,0 +1,14 @@
+# --- torch : à installer AVANT le reste si vous voulez le GPU (voir README) ---
+# GPU NVIDIA :
+#   pip install torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+# Sinon (CPU, par défaut), coqui-tts installera automatiquement torch CPU.
+# Ne PAS monter torch >= 2.6 sans patch (torch.load weights_only=True casse le checkpoint XTTS).
+
+coqui-tts==0.27.5
+transformers>=4.46,<5.0     # garde-fou : transformers 5.x casse la génération interne de XTTS
+sounddevice==0.5.1          # lecture audio sans fichier temporaire (jamais pyaudio sous Windows)
+numpy>=1.24,<3.0
+
+pynput>=1.7                 # raccourci global + Ctrl/Cmd+C simulé
+pystray>=0.19               # icône de zone de notification (l'app vit en tâche de fond)
+Pillow>=10.0               # requis par pystray pour dessiner l'icône

@@ -1,0 +1,24 @@
+# Voice samples (personal / copyrighted audio, never versioned)
+voices/
+
+# User config (machine-specific: active voice path, theme, hotkeys...)
+config.json
+
+# Redirected model caches (HF / torch / pip)
+cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# Internal notes (kept locally, not published)
+XTTS-v2_setup_recap.md
+CLAUDE.md
