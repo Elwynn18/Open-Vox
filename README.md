@@ -10,8 +10,9 @@ l'application le **lit à voix haute** avec une voix clonée par **XTTS v2, 100 
 
 - Aucune API cloud, aucune clé, aucune télémétrie. Tout tourne hors-ligne (après le
   téléchargement initial du modèle, ~1,8 Go).
-- GUI minimale en **Tkinter** (stdlib) pour gérer les voix, la langue et l'accélération,
-  avec **mode clair / sombre** et **interface en français, anglais ou espagnol**.
+- GUI **glassmorphisme** en **Tkinter** (stdlib) pour gérer les voix, la langue, l'accélération
+  et le **volume**, avec **bascule clair / sombre** (bouton ☀/☾) et **interface en français,
+  anglais ou espagnol**.
 - L'app vit en **tâche de fond** avec une **icône de zone de notification**.
 
 ## Fonctionnement

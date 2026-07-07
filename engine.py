@@ -226,6 +226,11 @@ class TTSEngine:
             wav = self._play_q.get()
             try:
                 if not self._stop.is_set():
+                    # Volume lu à la lecture (pas à la synthèse) : un changement de
+                    # curseur s'applique dès la phrase suivante, même déjà synthétisée.
+                    vol = float(self.config.get("volume", 1.0))
+                    if vol < 0.999:
+                        wav = wav * np.float32(max(vol, 0.0))
                     sd.play(wav, samplerate=SAMPLE_RATE, blocking=True)
             except Exception as e:  # noqa: BLE001 — surtout pas tuer le thread de lecture
                 self._emit("play_error", err=str(e))

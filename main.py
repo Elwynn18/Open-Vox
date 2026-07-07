@@ -67,6 +67,10 @@ def main() -> None:
                 pass
 
     def quit_app() -> None:
+        try:
+            gui.save_geometry()  # mémorise taille/position même en quittant depuis le tray
+        except Exception:
+            pass
         _cleanup()
         root.after(0, root.destroy)
 

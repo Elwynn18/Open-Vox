@@ -16,8 +16,10 @@ DEFAULTS: dict = {
     "hotkey_speak": "<ctrl>+<alt>+s",  # raccourci : lire la sélection
     "hotkey_stop": "<ctrl>+<alt>+x",   # raccourci : stopper la lecture
     "temperature": 0.7,                # créativité de la synthèse XTTS
+    "volume": 1.0,                     # gain de lecture 0.0–1.0 (curseur GUI)
     "theme": "light",                  # light | dark  (apparence de la GUI)
     "ui_language": "fr",               # fr | en | es  (langue de l'interface)
+    "window_geometry": "",             # position mémorisée (la taille de la fenêtre est fixe)
 }
 
 
